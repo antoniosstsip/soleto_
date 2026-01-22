@@ -133,9 +133,7 @@ export function MenuPage() {
       min-w-max
       md:max-h-none
       md:min-w-0
-      md:justify-center
-    "
-  >
+      md:justify-center">
 
 
         
