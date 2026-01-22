@@ -38,11 +38,30 @@ export function MenuPage() {
         <div className="grid gap-3">
           {items.map((item: MenuItem, index: number) => (
             <Card
-              key={index}
-              className="group p-4 md:p-5 active:shadow-lg active:shadow-[#D4AF37]/10 md:hover:shadow-lg md:hover:shadow-[#D4AF37]/10 transition-all duration-300 bg-white border-gray-200 active:border-[#D4AF37]/30 md:hover:border-[#D4AF37]/30"
-            >
-              {/* ΑΚΡΙΒΩΣ το ίδιο περιεχόμενο που είχες πριν */}
-            </Card>
+  key={index}
+  className="group p-4 md:p-5 active:shadow-lg active:shadow-[#D4AF37]/10 md:hover:shadow-lg md:hover:shadow-[#D4AF37]/10 transition-all duration-300 bg-white border-gray-200 active:border-[#D4AF37]/30 md:hover:border-[#D4AF37]/30"
+>
+  <div className="flex justify-between items-start gap-3 md:gap-4">
+    <div className="flex-1 min-w-0">
+      <h4 className="text-gray-900 font-heading group-active:text-[#D4AF37] md:group-hover:text-[#D4AF37] transition-colors duration-300 mb-1">
+        {item.name}
+      </h4>
+
+      {item.description && (
+        <p className="text-gray-600 text-sm leading-relaxed">
+          {item.description}
+        </p>
+      )}
+    </div>
+
+    <div className="flex-shrink-0 pt-0.5">
+      <span className="text-[#D4AF37] inline-block font-semibold">
+        {item.price}
+      </span>
+    </div>
+  </div>
+</Card>
+
           ))}
         </div>
       </div>
