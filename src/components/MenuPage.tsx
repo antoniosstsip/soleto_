@@ -125,10 +125,18 @@ export function MenuPage() {
         {/* Minimal Category Pills - Horizontal Scroll on Mobile */}
         <div className="mb-8 -mx-4 px-4">
           <div className="pb-2">
-  <div className="
-    grid grid-cols-2 gap-2
-    sm:grid-cols-3
-    md:flex md:flex-wrap md:justify-center ">
+<div className="overflow-x-auto pb-2 scrollbar-hide">
+  <div
+    className="
+      flex flex-wrap gap-2
+      max-h-[96px]
+      min-w-max
+      md:max-h-none
+      md:min-w-0
+      md:justify-center
+    "
+  >
+
 
         
               {categoryKeys.map((key, index) => (
