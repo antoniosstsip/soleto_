@@ -106,8 +106,13 @@ export function MenuPage() {
       <div className="max-w-4xl mx-auto px-4 py-8 md:py-12">
         {/* Minimal Category Pills - Horizontal Scroll on Mobile */}
         <div className="mb-8 -mx-4 px-4">
-          <div className="overflow-x-auto pb-2 scrollbar-hide">
-            <div className="flex gap-2 min-w-max md:min-w-0 md:flex-wrap md:justify-center px-1">
+          <div className="pb-2">
+  <div className="
+    grid grid-cols-2 gap-2
+    sm:grid-cols-3
+    md:flex md:flex-wrap md:justify-center ">
+
+        
               {categoryKeys.map((key, index) => (
                 <button
                   key={key}
