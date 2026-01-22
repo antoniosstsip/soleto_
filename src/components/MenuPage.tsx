@@ -24,32 +24,31 @@ export function MenuPage() {
       // My menuData structure: en: { Breakfast: [], ... } (No "All" key)
       // So I iterate over Object.entries(currentMenuData).
       
-      return Object.entries(currentMenuData).map(([categoryKey, items]) => (
-        <div key={categoryKey} className="mb-10">
-          <h3 className="mb-4 text-gray-900 font-heading text-center">{getCategoryLabel(categoryKey)}</h3>
-          <div className="grid gap-3">
-            {items.map((item: MenuItem, index: number) => (
-              <Card key={index} className="group p-4 md:p-5 active:shadow-lg active:shadow-[#D4AF37]/10 md:hover:shadow-lg md:hover:shadow-[#D4AF37]/10 transition-all duration-300 bg-white border-gray-200 active:border-[#D4AF37]/30 md:hover:border-[#D4AF37]/30">
-                <div className="flex justify-between items-start gap-3 md:gap-4">
-                  <div className="flex-1 min-w-0">
-                    <h4 className="text-gray-900 font-heading group-active:text-[#D4AF37] md:group-hover:text-[#D4AF37] transition-colors duration-300 mb-1">
-                      {item.name}
-                    </h4>
-                    {item.description && (
-                      <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
-                    )}
-                  </div>
-                  <div className="flex-shrink-0 pt-0.5">
-                    <span className="text-[#D4AF37] inline-block" style={{ fontWeight: 600 }}>
-                      {item.price}
-                    </span>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
+   return categoryKeys
+  .filter((key) => key !== "All")
+  .map((categoryKey) => {
+    const items = (currentMenuData as any)[categoryKey] as MenuItem[];
+    if (!items || items.length === 0) return null;
+
+    return (
+      <div key={categoryKey} className="mb-10">
+        <h3 className="mb-4 text-gray-900 font-heading text-center">
+          {getCategoryLabel(categoryKey)}
+        </h3>
+        <div className="grid gap-3">
+          {items.map((item: MenuItem, index: number) => (
+            <Card
+              key={index}
+              className="group p-4 md:p-5 active:shadow-lg active:shadow-[#D4AF37]/10 md:hover:shadow-lg md:hover:shadow-[#D4AF37]/10 transition-all duration-300 bg-white border-gray-200 active:border-[#D4AF37]/30 md:hover:border-[#D4AF37]/30"
+            >
+              {/* ΑΚΡΙΒΩΣ το ίδιο περιεχόμενο που είχες πριν */}
+            </Card>
+          ))}
         </div>
-      ));
+      </div>
+    );
+  });
+
     } else {
       // Single category view
       // Access data using the key
