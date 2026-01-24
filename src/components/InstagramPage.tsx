@@ -42,8 +42,8 @@ export function InstagramPage() {
       {/* Header */}
       <div className="bg-white border-b border-gray-200 py-12 md:py-16">
         <div className="max-w-5xl mx-auto px-4 text-center">
-          <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] rounded-full mb-6 active:scale-110 md:hover:scale-110 transition-transform duration-300 cursor-pointer animate-pulse">
-            <Instagram className="w-8 h-8 md:w-10 md:h-10 text-white" />
+          <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 border border-[#D4AF37]
+   <Instagram className="w-8 h-8 md:w-10 md:h-10 text-white" />
           </div>
           <h1 className="text-gray-900 mb-4 font-logo" style={{ fontWeight: 400 }}>{t('instagram.title')}</h1>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto text-sm md:text-base">
