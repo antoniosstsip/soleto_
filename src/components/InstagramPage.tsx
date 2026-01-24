@@ -65,7 +65,7 @@ export function InstagramPage() {
         <h2 className="text-center text-gray-900 mb-6 md:mb-8 font-logo" style={{ fontWeight: 400 }}>{t('instagram.recent')}</h2>
         
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 mb-8 md:mb-12">
-          {instagramPosts.map((post, index) => (
+{instagramPosts.slice(0, 3).map((post, index) => (
             <div
               key={index}
               className="relative aspect-square overflow-hidden rounded-lg cursor-pointer group shadow-md active:shadow-2xl md:hover:shadow-2xl transition-all duration-300 touch-manipulation"
