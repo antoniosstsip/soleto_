@@ -51,7 +51,15 @@ export function InstagramPage() {
           </p>
           <Button
             onClick={handleInstagramClick}
-            className="bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737] active:opacity-90 md:hover:opacity-90 text-white px-6 md:px-8 py-5 md:py-6 touch-manipulation active:scale-95 md:hover:scale-105 md:hover:shadow-xl transition-all duration-300"
+            className="className="
+  border-2 border-[#D4AF37]
+  text-[#D4AF37]
+  bg-transparent
+  hover:bg-[#D4AF37]
+  hover:text-white
+  transition-all duration-300
+"
+ active:opacity-90 md:hover:opacity-90 text-white px-6 md:px-8 py-5 md:py-6 touch-manipulation active:scale-95 md:hover:scale-105 md:hover:shadow-xl transition-all duration-300"
           >
             <Instagram className="w-5 h-5 mr-2" />
             @soleto_puresummer
