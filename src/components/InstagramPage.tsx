@@ -64,7 +64,8 @@ export function InstagramPage() {
       <div className="max-w-6xl mx-auto px-4 py-8 md:py-12">
         <h2 className="text-center text-gray-900 mb-6 md:mb-8 font-logo" style={{ fontWeight: 400 }}>{t('instagram.recent')}</h2>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 mb-8 md:mb-12">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 md:mb-12">
+
 {instagramPosts.slice(0, 3).map((post, index) => (
             <div
               key={index}
